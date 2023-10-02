@@ -1,22 +1,21 @@
-﻿using VitaConnect.ItDeveloper.Domain.Enums;
+﻿using VitaConnect.ItDeveloper.Domain.Entities.Base;
+using VitaConnect.ItDeveloper.Domain.Enums;
 
 namespace VitaConnect.ItDeveloper.Domain.Entities
 {
-	public class Paciente
+	public class Paciente : EntityBase
 	{
 		public Paciente() { Ativo = true; }
-		public string Id { get; set; }
-
 		public Guid EstadoPacienteId { get; set; }
 		public virtual EstadoPaciente? EstadoPaciente { get; set; }
 
 		public string? Nome { get; set; }
-		public DateTime DataNascimento { get;set; }
-		public DateTime DataInternacao { get;set; }
-		public string? Email { get;set; }
-		public bool Ativo { get;set; }
-		public string? Cpf { get;set; }
-		public TipoPaciente TipoPaciente { get;set; }
+		public DateTime DataNascimento { get; set; }
+		public DateTime DataInternacao { get; set; }
+		public string? Email { get; set; }
+		public bool Ativo { get; set; }
+		public string? Cpf { get; set; }
+		public TipoPaciente TipoPaciente { get; set; }
 		public Sexo Sexo { get; set; }
 		public string? Rg { get; set; }
 		public string? RgOrgao { get; set; }

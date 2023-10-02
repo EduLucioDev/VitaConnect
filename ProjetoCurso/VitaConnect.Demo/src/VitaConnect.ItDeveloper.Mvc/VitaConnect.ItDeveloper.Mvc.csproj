@@ -7,4 +7,8 @@
     <UserSecretsId>c13c86b1-01c1-4d17-a04c-cb54ff21fd22</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\VitaConnect.ItDeveloper.Domain\VitaConnect.ItDeveloper.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
