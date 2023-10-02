@@ -1,6 +1,9 @@
 ﻿using VitaConnect.ItDeveloper.Domain.Entities.Base;
 using VitaConnect.ItDeveloper.Domain.Enums;
 
+/// <summary>
+/// Classe que representa um paciente e suas informações no domínio do aplicativo.
+/// </summary>
 namespace VitaConnect.ItDeveloper.Domain.Entities
 {
 	public class Paciente : EntityBase
@@ -26,6 +29,5 @@ namespace VitaConnect.ItDeveloper.Domain.Entities
 		{
 			return Id.ToString() + "    " + Nome;
 		}
-
 	}
 }

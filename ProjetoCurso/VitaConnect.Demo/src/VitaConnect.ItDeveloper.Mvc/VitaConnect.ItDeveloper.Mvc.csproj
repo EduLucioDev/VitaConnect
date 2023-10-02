@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\VitaConnect.ItDeveloper.Data\VitaConnect.ItDeveloper.Data.csproj" />
     <ProjectReference Include="..\VitaConnect.ItDeveloper.Domain\VitaConnect.ItDeveloper.Domain.csproj" />
   </ItemGroup>
 

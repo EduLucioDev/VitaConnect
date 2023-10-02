@@ -1,9 +1,13 @@
-﻿namespace VitaConnect.ItDeveloper.Domain.Entities
+﻿using VitaConnect.ItDeveloper.Domain.Entities.Base;
+
+namespace VitaConnect.ItDeveloper.Domain.Entities
 {
-	public class EstadoPaciente
+	/// <summary>
+	/// Classe que representa o estado de um paciente no domínio do aplicativo.
+	/// </summary>
+	public class EstadoPaciente : EntityBase
 	{
-		public Guid Id { get; set; }
-		public String? Descricao { get; set; }
+		public string? Descricao { get; set; }
 		public ICollection<Paciente>? Pacientes { get; set; }
 	}
 }

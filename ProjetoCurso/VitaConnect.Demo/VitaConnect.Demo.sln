@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VitaConnect.ItDeveloper.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VitaConnect.ItDeveloper.Mvc", "src\VitaConnect.ItDeveloper.Mvc\VitaConnect.ItDeveloper.Mvc.csproj", "{6B2CFF5E-4F8C-4832-B19A-D406C3298C08}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Infra", "4.Infra", "{E38670C8-DC37-4BC6-A39D-10AA95E3B08C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VitaConnect.ItDeveloper.Data", "src\VitaConnect.ItDeveloper.Data\VitaConnect.ItDeveloper.Data.csproj", "{C3ECBB60-3DAD-4429-BD8B-58E66A9A2B41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{6B2CFF5E-4F8C-4832-B19A-D406C3298C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B2CFF5E-4F8C-4832-B19A-D406C3298C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B2CFF5E-4F8C-4832-B19A-D406C3298C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3ECBB60-3DAD-4429-BD8B-58E66A9A2B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3ECBB60-3DAD-4429-BD8B-58E66A9A2B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3ECBB60-3DAD-4429-BD8B-58E66A9A2B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3ECBB60-3DAD-4429-BD8B-58E66A9A2B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EF674038-817B-49F1-B8E4-2B38BDE9F94B} = {6957F03E-A2DC-45D3-B73E-421DA332E48A}
 		{6B2CFF5E-4F8C-4832-B19A-D406C3298C08} = {81248D14-9400-4599-BEF9-8BDE462C224A}
+		{C3ECBB60-3DAD-4429-BD8B-58E66A9A2B41} = {E38670C8-DC37-4BC6-A39D-10AA95E3B08C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90A46892-D635-4467-AE94-C8390E173F1A}
