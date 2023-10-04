@@ -4,7 +4,7 @@ using VitaConnect.ItDeveloper.Domain.Entities;
 
 namespace VitaConnect.ItDeveloper.Data.Mappings
 {
-    public class EstdoPacienteMap : IEntityTypeConfiguration<EstadoPaciente>
+    public class EstadoPacienteMap : IEntityTypeConfiguration<EstadoPaciente>
     {
         public void Configure(EntityTypeBuilder<EstadoPaciente> builder)
         {
