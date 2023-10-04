@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using VitaConnect.ItDeveloper.Data.Mappings;
 using VitaConnect.ItDeveloper.Domain.Entities;
 
 /// <summary>
@@ -17,6 +18,16 @@ namespace VitaConnect.ItDeveloper.Data.Data.ORM
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
+			foreach (var property in modelBuilder.Model.GetEntityTypes()
+				.SelectMany(e => e.GetProperties()
+				.Where(p => p.ClrType == typeof(string))))
+			{
+				property.SetColumnType("varchar(90)");
+			}
+
+			modelBuilder.ApplyConfiguration(new EstadoPacienteMap());
+			modelBuilder.ApplyConfiguration(new PacienteMap());
+
 			base.OnModelCreating(modelBuilder);
 		}
 	}

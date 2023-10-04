@@ -13,6 +13,9 @@ namespace VitaConnect.ItDeveloper.Data.Mappings
                 .IsRequired().HasColumnName("Descricao");
             builder.HasMany(p => p.Pacientes)
                 .WithOne(p => p.EstadoPaciente);
+
+            builder.ToTable(nameof(EstadoPaciente));
+
                 //.OnDelete(DeleteBehavior.Cascade);
 
         }
