@@ -11,7 +11,7 @@ using VitaConnect.ItDeveloper.Data.Data.ORM;
 
 namespace VitaConnect.ItDeveloper.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ITDeveloperDbContext))]
     [Migration("20231005010940_AddmappingsToOursEntities")]
     partial class AddmappingsToOursEntities
     {

@@ -8,9 +8,9 @@ using VitaConnect.ItDeveloper.Domain.Entities;
 /// </summary>
 namespace VitaConnect.ItDeveloper.Data.Data.ORM
 {
-	public class ApplicationDbContext : DbContext
+	public class ITDeveloperDbContext : DbContext
 	{
-		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+		public ITDeveloperDbContext(DbContextOptions<ITDeveloperDbContext> options)
 			: base(options)
 		{
 		}
@@ -30,7 +30,7 @@ namespace VitaConnect.ItDeveloper.Data.Data.ORM
 			//modelBuilder.ApplyConfiguration(new EstadoPacienteMap());
 			//modelBuilder.ApplyConfiguration(new PacienteMap());
 
-			modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+			modelBuilder.ApplyConfigurationsFromAssembly(typeof(ITDeveloperDbContext).Assembly);
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes()
 										.SelectMany(e => e.GetForeignKeys()))

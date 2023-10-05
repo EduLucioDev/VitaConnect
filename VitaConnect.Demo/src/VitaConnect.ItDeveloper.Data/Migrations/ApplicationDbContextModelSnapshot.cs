@@ -10,7 +10,7 @@ using VitaConnect.ItDeveloper.Data.Data.ORM;
 
 namespace VitaConnect.ItDeveloper.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ITDeveloperDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
