@@ -1,74 +1,13 @@
-﻿@using VitaConnect.ItDeveloper.Mvc.Controllers;
+﻿@{
+	ViewData["Tittle"] = "Lista de Pacientes";
+}
 
-@model IEnumerable<Paciente>
+<partial name="PartialViews/_cabecalho"/>
 
 
-<h3>Gestão de pacientes</h3>
-	</hr>
-<p>
-	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-</p>
 
-<div class="row">
-	<div class="panel-body">
-		<div class="col-12">
-			<div class="row">
-				<div class="panel-success">
-					<div class="panel panel-heading">
-						<h3>Lista de Pacientes</h3>
-					</div>
-				</div>
-
-				<hr />
-
-				<table class="table table-striped table-hover">
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>Nome do Paciente</th>
-							<th>Idade</th>
-							<th>Cpf</th>
-							<th>Telefone</th>
-							<th>Bairro</th>
-							<th>Ação</th>
-						</tr>
-					</thead>
-					<tbody>
-						@foreach (var itemSelecionado in Model)
-						{
-							var numero = "";
-							@foreach (var telefoneSelecionado in @itemSelecionado.Telefones)
-							{
-								if (@telefoneSelecionado.TipoDeTelefone == "Celular")
-								{
-									numero = @telefoneSelecionado.Numero;
-								}
-							}
-							<tr>
-								<td>@itemSelecionado.Id</td>
-								<td>@itemSelecionado.Nome</td>
-								<td>@itemSelecionado.Idade anos</td>
-								<td>@itemSelecionado.Cpf</td>
-								<td>
-									@numero
-								</td>
-								<td>@itemSelecionado.Bairro</td>
-
-								<td>
-									<a class="btn btn-warning" asp-route-id="@itemSelecionado.Nome"
-								   asp-controller="Paciente"
-								   asp-action="DetalheDePaciente"
-			   title="Detalhes de Paciente">
-										Detalhe de Paciente
-									</a>
-									<a class="btn btn-info" href="javascript:void()" title="Editar Paciente">Editar Paciente</a>
-									<a class="btn btn-danger" href="javascript:void()" title="Editar Paciente">Excluir Paciente</a>
-								</td>
-							</tr>
-						}
-					</tbody>
-				</table>
-			</div>
-		</div>
+<div class="panel panel-success panel-controls">
+	<div class="panel panel-heading">
+		<h3>Lista de Pacientes</h3>
 	</div>
 </div>
