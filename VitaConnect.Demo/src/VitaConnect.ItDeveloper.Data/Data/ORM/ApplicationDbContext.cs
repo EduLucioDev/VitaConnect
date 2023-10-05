@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using VitaConnect.ItDeveloper.Data.Mappings;
 using VitaConnect.ItDeveloper.Domain.Entities;
 
@@ -15,6 +16,7 @@ namespace VitaConnect.ItDeveloper.Data.Data.ORM
 		}
 
 		public DbSet<Paciente> Paciente { get; set; }
+		public DbSet<EstadoPaciente> EstadoPaciente { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -25,10 +27,18 @@ namespace VitaConnect.ItDeveloper.Data.Data.ORM
 				property.SetColumnType("varchar(90)");
 			}
 
-			modelBuilder.ApplyConfiguration(new EstadoPacienteMap());
-			modelBuilder.ApplyConfiguration(new PacienteMap());
+			//modelBuilder.ApplyConfiguration(new EstadoPacienteMap());
+			//modelBuilder.ApplyConfiguration(new PacienteMap());
 
-			base.OnModelCreating(modelBuilder);
+			modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes()
+										.SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.ClientSetNull;
+            }
+
+            base.OnModelCreating(modelBuilder);
 		}
 	}
 }
